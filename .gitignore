@@ -1,0 +1,7 @@
+# Emacs
+*~
+\#*\#
+
+# node.js
+node_modules/
+yarn-error.log
