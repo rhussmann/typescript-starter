@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.7",
     "@types/jest": "^23.1.2",
     "@types/source-map-support": "^0.4.1",
     "husky": "^0.14.3",

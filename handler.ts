@@ -1,12 +1,16 @@
-'use strict';
+import { Callback, Context, SNSEvent } from "aws-lambda";
 
-module.exports.hello = (event, context, callback) => {
+module.exports.hello = (
+  event: SNSEvent,
+  context: Context,
+  callback: Callback<any>,
+) => {
   const response = {
-    statusCode: 200,
     body: JSON.stringify({
-      message: 'Go Serverless v1.0! Your function executed successfully!',
       input: event,
+      message: "Go Serverless v1.0! Your function executed successfully!",
     }),
+    statusCode: 200,
   };
 
   callback(null, response);
