@@ -1,4 +1,5 @@
 import { Callback, Context, SNSEvent } from "aws-lambda";
+import "source-map-support/register";
 
 module.exports.hello = (
   event: SNSEvent,
