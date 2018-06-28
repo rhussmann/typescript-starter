@@ -1,3 +1,5 @@
-scribe("The test harness", () => {
-  it("runs", () => {});
+describe("The test harness", () => {
+  it("runs", () => {
+    expect(true).toBeTruthy();
+  });
 });

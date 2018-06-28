@@ -15,13 +15,8 @@
     "typescript": "^2.9.2"
   },
   "scripts": {
-    "lint": "tslint -p . ",
-    "precommit": "lint && lint-staged",
+    "lint": "tslint -p . && prettier --write test/*.ts",
     "test": "jest --no-colors"
-  },
-  "lint-staged": {
-    "*.{js,jsx,json,ts,tsx,md}": ["prettier --write", "git add"],
-    "*.{js,jsx,ts,tsx}": "tslint -p . "
   },
   "jest": {
     "transform": {
