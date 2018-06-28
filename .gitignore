@@ -5,3 +5,6 @@
 # node.js
 node_modules/
 yarn-error.log
+
+# TS / Serverless
+.build/
