@@ -5,25 +5,38 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^23.1.2",
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
     "@types/source-map-support": "^0.4.1",
+    "awesome-typescript-loader": "^5.2.0",
     "husky": "^0.14.3",
     "jest": "^23.2.0",
     "lint-staged": "^7.2.0",
     "prettier": "^1.13.6",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "source-map-loader": "^0.2.3",
     "ts-jest": "^22.4.6",
     "ts-node": "^7.0.0",
     "tslint": "^5.10.0",
-    "typescript": "^2.9.2"
+    "typescript": "^2.9.2",
+    "webpack": "^4.13.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   },
   "scripts": {
     "lint": "tslint -p . && prettier --write test/*.ts",
-    "test": "jest --no-colors"
+    "test": "jest --no-colors",
+    "dev": "webpack-dev-server --hot --inline"
   },
   "jest": {
     "transform": {
-      "^.+\\.tsx?$": "ts-jest"
+      "^.+\\.js$": "babel-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts)$",
+    "moduleDirectories": [
+      "node_modules"
+    ],
     "moduleFileExtensions": [
       "ts",
       "js"
@@ -32,7 +45,5 @@
   "prettier": {
     "trailingComma": "all"
   },
-  "dependencies": {
-    "source-map-support": "^0.5.6"
-  }
+  "dependencies": {}
 }
